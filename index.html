@@ -5,18 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LETRECO DO LUCAS - DC</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div></div>
+<body onload="buscando()">
+    <div class="padrao"><p>Letreco do Lucas da DC</p></div>
     <section>
-        <div>
-            <div><input type="text"  id="ltr0" class="letras"><input type="text"  id="ltr1" class="letras"><input type="text"  id="ltr2" class="letras"><input type="text"  id="ltr3" class="letras"><input type="text"  id="ltr4" class="letras"> <input type="button" value="TESTAR" onclick="testar()"></div>
+        <div class="conteiner padrao">
+            <div class="entrada">
+                <div><span>Digite a palavra, letra por letra </span></div>
+            <div><input type="text"  id="ltr0" class="letras"><input type="text"  id="ltr1" class="letras"><input type="text"  id="ltr2" class="letras"><input type="text"  id="ltr3" class="letras"><input type="text"  id="ltr4" class="letras"> <input type="button" value="TESTAR" onclick="testar()"></div></div>
             </div>
 
-            <div id="resultado"></div>
+            <div  class="resultado padrao">
+                <div id="letrasStatus" class="padrao result"></div>
+                <div id="resultado" class="padrao result"></div>
+                <div class="padrao result btn"><input type="button" value="Outra palavra" onclick="reiniciar()"></div>
+            </div>
     </section>
 
     <div></div>

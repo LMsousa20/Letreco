@@ -1,4 +1,67 @@
 .letras {
     width: 20px;
     margin: 5px;
+    font-weight: 700;
+}
+
+.entrada{
+    display: grid;
+}
+
+.padrao {
+    border: 1px solid rgba(0, 0, 0, 0.315);
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 1px 1px 3px black;
+    padding: 10px;
+
+}
+
+.resultado{
+    display: flex;
+}
+
+.result{
+    width: 28%;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CERTA {
+    background-color: green;
+border: solid 1px black;
+width: 15px;
+margin: 5px;
+}
+
+.ERRADA {
+    background-color: red;
+border: solid 1px black;
+width: 15px;
+margin: 5px;
+}
+
+.QUASE {
+    background-color: yellow;
+border: solid 1px black;
+width: 15px;
+margin: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+p, span, div, section, header, footer{
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+   
 }
