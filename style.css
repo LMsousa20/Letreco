@@ -1,7 +1,13 @@
+#erros{
+    
+    padding-top: 15px;
+}
+
 .letras {
     width: 20px;
     margin: 5px;
     font-weight: 700;
+    transition: 600ms;
 }
 
 .entrada{
@@ -16,15 +22,29 @@
     max-width: 600px;
     box-shadow: 1px 1px 3px black;
     padding: 10px;
-
+    transition: 600ms;
 }
 
 .resultado{
     display: flex;
+   
+    transition: 600ms;
 }
 
 .result{
-    width: 28%;
+    border: 1px solid rgba(0, 0, 0, 0.315);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 1px 1px 3px black;
+    
+   padding: 5px;
+
+    width: 50%;
+    transition: 600ms;
 }
 
 .btn {
@@ -36,32 +56,45 @@
 .CERTA {
     background-color: green;
 border: solid 1px black;
-width: 15px;
-margin: 5px;
+width: 100%;
+margin-bottom: 5px;
+height: 25px;
+transition: 600ms;
 }
 
 .ERRADA {
-    background-color: red;
+background-color: red;
 border: solid 1px black;
-width: 15px;
-margin: 5px;
+width: 100%;
+margin-bottom: 5px;
+height: 25px;
+transition: 600ms;
 }
 
 .QUASE {
     background-color: yellow;
 border: solid 1px black;
-width: 15px;
-margin: 5px;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-
-p, span, div, section, header, footer{
-    font-family: 'Roboto', sans-serif;
+height: 25px;
+transition: 600ms;
+margin-bottom: 5px;
+width: 100%;
 }
 
 body {
     margin: 0;
-    padding: 0;
+ 
+    transition: 600ms;
+       padding: 0;
+   
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   
    
 }
+
+section{
+    margin-right: auto;
+    margin-left: auto;
+}
+
