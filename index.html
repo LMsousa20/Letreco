@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LETRECO DO LUCAS - DC</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,18 +20,17 @@
         <div class="conteiner padrao externo">
             <div><span>Digite a palavra, letra por letra </span></div>
             <div class="entrada" id="entradaUnica">
-                
-                <div><input type="text" maxlength="1" id="ltr0" class="letras"><input type="text" maxlength="1" id="ltr1" class="letras"><input
-                        type="text" maxlength="1" id="ltr2" class="letras"><input type="text" maxlength="1" id="ltr3" class="letras"><input
-                        type="text" maxlength="1" id="ltr4" class="letras" >                        
-                    
-            </div>
-            <input class='btn-info' type="button" value="TESTAR" onclick="testar()"></div>
-            <div id="erros"><div id="tituloErros"></div>
-            <div id="resultado" class="padrao ">
+                <!-- entrada dos input via js -->
 
+                         
             </div>
-        </div>
+            <input class='btn-info' type="button" value="TESTAR" onclick="testar()">
+            <div id="erros">
+                <div id="tituloErros"></div>
+                <div id="resultado" class="padrao ">
+
+                </div>
+            </div>
         </div>
 
         <div class="padrao externo">
@@ -39,10 +39,11 @@
                 <div id="QUASE" class="QUASE"></div>
                 <div id="ERRADA" class="ERRADA"></div>
             </div>
-            
-            <div class="padrao btn"><input class='btn-info'type="button" value="Outra palavra" onclick="reiniciar()"></div>
+
+            <div class="padrao btn"><input class='btn-info' type="button" value="Outra palavra" onclick="reiniciar()">
+            </div>
         </div>
-       
+
     </section>
 
     <div></div>

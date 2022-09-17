@@ -13,15 +13,33 @@ function buscando() {
     let codigo = Math.random();
     palavraChave = (buscaPalavras[(codigo * 1000).toFixed(0)]).toUpperCase();
     document.getElementById('erros').style.display= 'none';
+
+    inputs();
     
 }
 
+function inputs() {
+    for(let t=0; t<7; t++){
+
+    document.getElementById('entradaUnica').innerHTML += `
+    <div>
+    <input type="text" maxlength="1" id="${t}ltr0" class="letras">
+    <input type="text" maxlength="1" id="${t}ltr1" class="letras">
+    <input type="text" maxlength="1" id="${t}ltr2" class="letras">
+    <input type="text" maxlength="1" id="${t}ltr3" class="letras">
+    <input type="text" maxlength="1" id="${t}ltr4" class="letras">
+
+</div>
+    `}
+
+}
+
 function testar() {
-    palavraDigitada[0] = document.getElementById('ltr0').value.toUpperCase();
-    palavraDigitada[1] = document.getElementById('ltr1').value.toUpperCase();
-    palavraDigitada[2] = document.getElementById('ltr2').value.toUpperCase();
-    palavraDigitada[3] = document.getElementById('ltr3').value.toUpperCase();
-    palavraDigitada[4] = document.getElementById('ltr4').value.toUpperCase();
+    palavraDigitada[0] = document.getElementById(`${tentativas}ltr0`).value.toUpperCase();
+    palavraDigitada[1] = document.getElementById(`${tentativas}ltr1`).value.toUpperCase();
+    palavraDigitada[2] = document.getElementById(`${tentativas}ltr2`).value.toUpperCase();
+    palavraDigitada[3] = document.getElementById(`${tentativas}ltr3`).value.toUpperCase();
+    palavraDigitada[4] = document.getElementById(`${tentativas}ltr4`).value.toUpperCase();
 
 
     console.log(palavraDigitada);
@@ -32,13 +50,14 @@ function testar() {
 
 function comparar() {
     pontuacao = 0;
-    tentativas++;
+    
     for(let i=0; i<palavraChave.length; i++){
 
         if(palavraChave[i] === palavraDigitada[i]){
 
-            document.getElementById(`ltr${i}`).style.backgroundColor = 'green';
-            document.getElementById(`ltr${i}`).style.color = 'white';
+            document.getElementById(`${tentativas}ltr${i}`).style.backgroundColor = 'green';
+            document.getElementById(`${tentativas}ltr${i}`).style.color = 'white';
+            document.getElementById(`${tentativas}ltr${i}`).disabled = true;
             pontuacao ++;
 
             if(CERTA.indexOf(palavraDigitada[i]) === -1){
@@ -50,22 +69,23 @@ function comparar() {
 
         }else{
             
-            document.getElementById(`ltr${i}`).style.backgroundColor = 'red';
-            document.getElementById(`ltr${i}`).style.color = 'white';
+            document.getElementById(`${tentativas}ltr${i}`).style.backgroundColor = 'red';
+            document.getElementById(`${tentativas}ltr${i}`).style.color = 'white';
+            document.getElementById(`${tentativas}ltr${i}`).disabled = true;
          
 
             
             for(let v=0; v<palavraDigitada.length; v++){
                 if(palavraChave.indexOf(palavraDigitada[i]) !== -1){
-                          document.getElementById(`ltr${i}`).style.backgroundColor = 'yellow';
-                    document.getElementById(`ltr${i}`).style.color = 'black';
+                          document.getElementById(`${tentativas}ltr${i}`).style.backgroundColor = 'yellow';
+                    document.getElementById(`${tentativas}ltr${i}`).style.color = 'black';
+                    document.getElementById(`${tentativas}ltr${i}`).disabled = true;
                     
                     if(QUASE.indexOf(palavraDigitada[i]) === -1){
                         document.getElementById('QUASE').innerHTML += `${palavraDigitada[i]}`
                     }
                     QUASE.push(palavraDigitada[i])
                     
-                    console.log(i,v)
                     console.log(QUASE.indexOf(palavraDigitada[i]))
 
                 }
@@ -86,9 +106,11 @@ function comparar() {
      
        }else{
         document.getElementById('resultado').style.backgroundColor = 'RED';
-        adicionarErro()
+        
      
        }
+       tentativas++;
+       adicionarErro()
     }
 
     function reiniciar(){
@@ -100,14 +122,16 @@ function comparar() {
 
 function adicionarErro(){
     if(tentativas != 0){
-        document.getElementById('erros').style.display= '';
+        document.getElementById('erros').style.display+= '';
     
         document.getElementById('tituloErros').innerHTML = `<span>ERROS</span>`;
     }
 
     document.getElementById('resultado').innerHTML += `${palavraDigitada.join('')} <BR>`;
-    if(tentativas > 5){
-        alert('Ja usou as 5 tentativas')
-        reiniciar()
+
+    if(tentativas > 6 ){
+        alert('Ja usou as 7 tentativas')
+        
     }
+    console.log(tentativas)
             }
