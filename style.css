@@ -3,6 +3,8 @@
     padding-top: 15px;
 }
 
+
+
 .letras {
     width: 20px;
     margin: 5px;
@@ -54,7 +56,7 @@
 }
 
 .CERTA {
-    background-color: green;
+    background-color: rgb(0, 255, 0);
 border: solid 1px black;
 width: 100%;
 margin-bottom: 5px;
@@ -63,7 +65,7 @@ transition: 600ms;
 }
 
 .ERRADA {
-background-color: red;
+background-color: rgb(255, 98, 98);
 border: solid 1px black;
 width: 100%;
 margin-bottom: 5px;
@@ -72,7 +74,7 @@ transition: 600ms;
 }
 
 .QUASE {
-    background-color: yellow;
+    background-color: rgb(255, 255, 104);
 border: solid 1px black;
 height: 25px;
 transition: 600ms;
